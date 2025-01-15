@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "6df724f2-b764-4ebd-803b-8aa91edc9db6",
+		"name": "auth0-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36321798"
+	},
+	"item": [
+		{
+			"name": "Auth0 - Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test4@test.com\",\r\n    \"password\": \"test@123\",\r\n    \"roles\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth0 - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth0 -verify-token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVBbGxxdTVpdEYxTUtYMXd5NXR2VSJ9.eyJodHRwczovL2V4YW1wbGUuY29tL3JvbGVzIjoiYWRtaW4iLCJodHRwczovL2V4YW1wbGUuY29tL2VtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlzcyI6Imh0dHBzOi8vZGV2LTRlNjF4b2N4NXY4bndoaWwudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDY3ODc4ODk4MDI2M2Q1ZTM5ZWRhMzZjMSIsImF1ZCI6WyJodHRwczovL2Rldi00ZTYxeG9jeDV2OG53aGlsLnVzLmF1dGgwLmNvbS9hcGkvdjIvIiwiaHR0cHM6Ly9kZXYtNGU2MXhvY3g1djhud2hpbC51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNzM2OTQ1NzI2LCJleHAiOjE3MzcwMzIxMjYsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgcmVhZDpjdXJyZW50X3VzZXIgdXBkYXRlOmN1cnJlbnRfdXNlcl9tZXRhZGF0YSBkZWxldGU6Y3VycmVudF91c2VyX21ldGFkYXRhIGNyZWF0ZTpjdXJyZW50X3VzZXJfbWV0YWRhdGEgY3JlYXRlOmN1cnJlbnRfdXNlcl9kZXZpY2VfY3JlZGVudGlhbHMgZGVsZXRlOmN1cnJlbnRfdXNlcl9kZXZpY2VfY3JlZGVudGlhbHMgdXBkYXRlOmN1cnJlbnRfdXNlcl9pZGVudGl0aWVzIiwiZ3R5IjoicGFzc3dvcmQiLCJhenAiOiJmbllHMnlFQUM2TnY5aTQ0SWx4TmE5RHNXaVNCcWtsaSJ9.FU8-mu9HQ2SWpPjmhtj5eCf_3Th0VzB6JAlrMlfsHoWMdqbviJrzZk7anSYEughenHJQbFuMKBM3xkGwayrXpco0uZTMFm0DhcNacM9GGfgykqz31nbFsDH695yIq724xAnP87Tqo35Tz8TQawk8E288eaLWI3Hya-re6IlRIWOyR906p_8bSjb5YDiquitUTzg3Q-cY7oAvpMDo0S6ZosLrOCSVUC3PpeTg15icT06RDQxyBXypX9gjwbtwdq7zcOXgrTG8tuQGFl0JIpH8jrHD9o0O-Evc9-JNQK_6r22q5Zfzbi0nQ6DLnI5qY8b4yPoQtheAln1Ob72mcfNXWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/verify-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"verify-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
